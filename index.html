@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta property='og:image' content='https://i.ibb.co/m9j0VQH/a.jpg'>
+    <title>প্রধানমন্ত্রী নির্বাচন</title>
+
+    <!-- check if JavaScript is disabled from browser settings and redirect user to the non-JavaScript version of the website -->
+    <noscript>
+        <meta http-equiv="refresh" content="0;url=nonjs.html">
+    </noscript>
+
+    <link rel="icon" href="https://i.ibb.co/mvy8qFb/yp1j2utn-400x400.jpg" type="image/x-icon" sizes="30x30">
+
+    <!-- swiper css -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- box icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-MD1R1ktiMcrpfU+wVVSaGngbP7J4RTBsnvuMKH2FVhJxIM9jMZH4oNwXwyAPv9y4eouKcD1lCGTG4QJffcc9PQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://i.ibb.co/KKGrssF/a.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center center;
+            background-clip: content-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .poll-container {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 750px;
+            padding: 20px;
+        }
+
+        .poll-question {
+            font-size: 20px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .poll-options {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .poll-option {
+            display: flex;
+            align-items: center;
+            margin-bottom: 17px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #f5f5f5;
+        }
+
+        .poll-option img {
+            width: 90px;
+            height: 90px;
+            border-radius: 4px;
+            margin-right: 10px;
+        }
+
+        .poll-option-info {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .siam-text {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+        .poll-content {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .poll-bar-container {
+            display: flex;
+            align-items: center;
+            flex: 1;
+            position: relative;
+            background-color: #e0e0e0;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 16px;
+            margin-right: 10px;
+        }
+
+        .poll-bar {
+            height: 100%;
+            transition: width 0.5s ease-in-out;
+        }
+
+        .poll-percentage {
+            font-size: 14px;
+            color: #666;
+            margin-left: 10px;
+        }
+
+        .submit-btn {
+            padding: 8px 15px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        .submit-btn:disabled {
+            background-color: #bbb;
+            cursor: not-allowed;
+        }
+
+        /* Modal styles */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.4);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background-color: #fff;
+            padding: 97px;
+            border: 1px solid #888;
+            width: 900%;
+            max-width: 400px;
+            text-align: center;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .link-container {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .copy-btn {
+            margin-left: 10px;
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="poll-container">
+
+
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '8a40b8b45e7baa3ef7b853e8e73d1a4b',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.topcreativeformat.com/8a40b8b45e7baa3ef7b853e8e73d1a4b/invoke.js"></script>
+
+
+        <h2 class="poll-question">আপনার পছন্দের নেত্রী কে বেছে নিন</h2>
+        <div class="poll-options">
+            <div class="poll-option">
+                <img src="https://i.ibb.co/pZXRvhq/a.jpg" alt="খালেদা জিয়া">
+                <div class="poll-option-info">
+                    <span class="siam-text">খালেদা জিয়া</span>
+                    <span>বিএনপি</span>
+                </div>
+                <div class="poll-content">
+                    <div class="poll-bar-container">
+                        <div class="poll-bar" id="option1-bar"></div>
+                    </div>
+                    <span class="poll-percentage" id="option1-percent">85.7%</span>
+                    <button class="submit-btn" id="submit-btn-js" onclick="vote(1)">Vote</button>
+                </div>
+            </div>
+
+            <div class="poll-option">
+                <img src="https://i.ibb.co/W3WVtX1/b.jpg" alt="শেখ হাসিনা">
+                <div class="poll-option-info">
+                    <span class="siam-text">শেখ হাসিনা</span>
+                    <span>আওয়ামী লীগ</span>
+                </div>
+                <div class="poll-content">
+                    <div class="poll-bar-container">
+                        <div class="poll-bar" id="option2-bar"></div>
+                    </div>
+                    <span class="poll-percentage" id="option2-percent">14.3%</span>
+                    <button class="submit-btn" id="submit-btn-python" onclick="vote(2)">Vote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Modal -->
+    <div id="voteModal" class="modal">
+        <div class="modal-content">
+
+
+        <script type="text/javascript">
+            atOptions = {
+                'key' : '8a40b8b45e7baa3ef7b853e8e73d1a4b',
+                'format' : 'iframe',
+                'height' : 90,
+                'width' : 728,
+                'params' : {}
+            };
+        </script>
+        <script type="text/javascript" src="//www.topcreativeformat.com/8a40b8b45e7baa3ef7b853e8e73d1a4b/invoke.js"></script>
+
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>লিংক কপি করে আপনার বন্ধুকে শেয়ার করুন</p>
+            <div class="link-container">
+                <a href="https://electionofprimeminister.blogspot.com/" target="_blank" id="youtube-link">https://electionofprimeminister.blogspot.com</a>
+                <button class="copy-btn" onclick="copyLink()">Copy</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let votes = [6, 1];
+
+        function vote(option) {
+            votes[option - 1]++;
+            updatePoll();
+            openModal();
+        }
+
+        function updatePoll() {
+            const totalVotes = votes.reduce((a, b) => a + b, 0);
+            const percentages = votes.map(vote => totalVotes === 0 ? 0 : (vote / totalVotes * 100).toFixed(1));
+
+            updateBar('option1-bar', 'option1-percent', percentages[0]);
+            updateBar('option2-bar', 'option2-percent', percentages[1]);
+        }
+
+        function updateBar(barId, percentId, percentage) {
+            const bar = document.getElementById(barId);
+            const percentElem = document.getElementById(percentId);
+
+            bar.style.width = percentage + '%';
+
+            // Set color based on percentage
+            if (percentage < 50) {
+                bar.style.backgroundColor = 'red'; // Low percentage
+            } else {
+                bar.style.backgroundColor = 'green'; // High percentage
+            }
+
+            percentElem.textContent = percentage + '%';
+        }
+
+        function openModal() {
+            const modal = document.getElementById('voteModal');
+            modal.style.display = 'flex';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('voteModal');
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            const modal = document.getElementById('voteModal');
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        function copyLink() {
+            const link = document.getElementById('youtube-link').href;
+            navigator.clipboard.writeText(link).then(() => {
+                alert('Link copied to clipboard');
+            }).catch(err => {
+                console.error('Could not copy text: ', err);
+            });
+        }
+
+        // Initialize the poll with preset votes
+        updatePoll();
+    </script>
+</body>
+</html>
